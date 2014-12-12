@@ -9,7 +9,9 @@ def setup
 end
 
 def install_ruby
-  rbenv_ruby node[:rbenv][:ruby_version]
+  rbenv_ruby node[:rbenv][:ruby_version] do
+    global true
+  end
 end
 
 def install_gems
